@@ -52,14 +52,14 @@ elif number == 0:
 	 print(f"Your number {number}")
 
 #4)Write a program to determine whether an employee is owed any overtime
-
 #ask the user how many hours the employee worked this week, as well as the hourly wage for this employee.
 employee_hours = int(input("How many hours you worked this week: "))
-hourly_wages = int(10)
-
+hourly_wages = float(input("Enter your Hourly wages: "))
+basic_salary = employee_hours * hourly_wages
+overtime_salary =(employee_hours - 40) * hourly_wages * 0.1 
 if employee_hours <= 40:
-	 print(f"your salary ${employee_hours * hourly_wages}")
+	 print(f"your salary ${basic_salary}")
 
 #If the employee worked more than 40 hours, you should print a message which says the employee is due some additional pay, as well as the amount due.
 elif employee_hours > 40:
-	 print(f"your salary ${(40 * hourly_wages)+((employee_hours - 40) * hourly_wages  * 1.1)} with overtime amount ")
+	 print(f"your salary ${basic_salary + overtime_salary} with overtime amount ")
